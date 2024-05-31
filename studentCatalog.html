@@ -1,0 +1,227 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Catalog</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody id="studentTableBody">
+        <!-- Student data will be dynamically added here --
+    </tbody>
+</table>
+
+<script>
+    // Fetch student data from the server and populate the table
+    fetch('/studentCatalog')
+        .then(response => response.json())
+        .then(students => {
+            const studentTableBody = document.getElementById('studentTableBody');
+            students.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${student.fname}</td>
+                    <td>${student.username}</td>
+                    <td>${student.email}</td>
+                    <td>${student.num}</td>
+                    <td>${student.gender}</td>
+                `;
+                studentTableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching student catalog:', error));
+</script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        #searchInput {
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.search-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#searchInput {
+    padding: 6px;
+    width: 200px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+}
+
+#searchInput:focus {
+    width: 300px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: #007bff;
+}
+
+.search-icon:before {
+    content: '\1F50D'; /* Unicode for search emoji */
+    font-size: 16px;
+}
+
+
+    </style>
+</head>
+<body>
+
+<h2>Student Catalog</h2>
+
+<input type="text" id="searchInput" onkeyup="searchStudent()" placeholder="Search for students..">
+
+<table>
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody id="studentTableBody">
+        <!-- Student data will be dynamically added here -->
+    </tbody>
+</table>
+
+<script>
+    function searchStudent() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toUpperCase();
+        const table = document.getElementById('studentTableBody');
+        const rows = table.getElementsByTagName('tr');
+
+        for (let i = 0; i < rows.length; i++) {
+            const cols = rows[i].getElementsByTagName('td');
+            let shouldShow = false;
+            for (let j = 0; j < cols.length; j++) {
+                const txtValue = cols[j].textContent || cols[j].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    shouldShow = true;
+                    break;
+                }
+            }
+            rows[i].style.display = shouldShow ? '' : 'none';
+        }
+    }
+
+    // Fetch student data from the server and populate the table
+    fetch('/studentCatalog')
+        .then(response => response.json())
+        .then(students => {
+            const studentTableBody = document.getElementById('studentTableBody');
+            students.forEach(student => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${student.fname}</td>
+                    <td>${student.username}</td>
+                    <td>${student.email}</td>
+                    <td>${student.num}</td>
+                    <td>${student.gender}</td>
+                `;
+                studentTableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching student catalog:', error));
+</script>
+
+</body>
+</html>

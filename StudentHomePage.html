@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <style>
+       
+          /* CSS for the logo */
+#logo {
+    width: 50px; /* Adjust the width as needed */
+    border-radius: 10px;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    margin-top: 10px; /* Adjust top margin as needed */
+    /* Add any other styles as needed */
+}
+
+  </style>
+      <link rel="stylesheet" href="AdminStudentHOmePage.css">
+</head>
+<body>
+
+  <nav>
+    <img src="./aph.jpg" alt="Logo">
+    <span>Academic Project Hub</span>
+  </nav>
+
+  <section>
+    <aside>
+      <div class="modules">
+        <a href="./Viewproject.html">Technology Stack</a>
+
+        <a href="./studentCatalog.html">Student Catalog</a>
+        <a href="./accountmanagementstudent.html">Account Management</a>
+      </div>
+    </aside>
+
+
+    <div class="main-content">
+      <h3>view Project</h3>
+      <div class="card" onclick="redirectToViewProject1()">
+        <h2>Frontend Projects</h2>
+        <p>View projects related to frontend development.</p>
+      </div>
+  
+      <div class="card" onclick="redirectToViewProject2()">
+        <h2>Backend Projects</h2>
+        <p>View projects related to backend development.</p>
+      </div>
+  
+      <div class="card" onclick="redirectToViewProject3()">
+        <h2>ML Projects</h2>
+        <p>View machine learning projects.</p>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    function redirectToViewProject1() {
+      // Redirect to the delete project page based on the selected technology
+      window.location.href = "./viewProjecttec.html";
+    }
+    
+    function redirectToViewProject2() {
+      // Redirect to the delete project page based on the selected technology
+      window.location.href = "./viewProjecttec2.html";
+    }
+    
+    function redirectToViewProject3() {
+      // Redirect to the delete project page based on the selected technology
+      window.location.href = "./viewProjecttec3.html";
+    }
+  </script></body>
+</html>

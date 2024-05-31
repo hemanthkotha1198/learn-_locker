@@ -1,0 +1,63 @@
+<!-- <-------------------- finalised first page  of showing the Registraction option-------------------------------- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User & Admin Panel</title>
+   <link rel="stylesheet" href="./Loginopt.css">
+   <script src="./script.js"></script>
+</head>
+<body>
+
+    <div class="panel">
+        <h2>Admin Registration</h2>
+        <button onclick="redirectToAdminRegPage()">Go to Admin Page</button>
+    </div>
+    
+    
+<div class="panel">
+    <h2>Student Registration</h2>
+    <button onclick="redirectToUserRegPage()">Go to Student Page</button>
+</div>
+
+
+</body>
+<script src="./script.js"></script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User & Admin Panel</title>
+    <link rel="stylesheet" href="./Loginopt.css">
+    <!-- <script src="./script.js"></script> -->
+</head>
+<body>
+    <div class="panel">
+        <h2>Admin Registration</h2>
+        <button id="redirectButton1">Go to Admin Registration</button>
+    </div>
+    
+    <div class="panel">
+        <h2>Student Registration</h2>
+        <button id="redirectButton2">Go to Student Registration</button>
+    </div>
+</body>
+
+<script>
+    document.getElementById("redirectButton1").addEventListener("click", function() {
+        // Redirect to another page
+        window.location.href = "AdminReg.html";
+    });
+    document.getElementById("redirectButton2").addEventListener("click", function() {
+        // Redirect to another page
+        window.location.href = "reg.html";
+    });
+</script>
+</html>
+<!-- D:\AcademicProject\lms-main\AdminReg.html -->
+  <!-- D:\AcademicProject\lms-main\reg.html -->

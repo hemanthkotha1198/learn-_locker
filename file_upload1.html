@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Upload</title>
+    <link rel="stylesheet" href="file_upload.css">
+</head>
+<body>
+    <h1>Upload Project</h1>
+    <form id="projectUploadForm" action="/uploadFile1" method="POST" enctype="multipart/form-data">
+        <label for="projectName">Project Name:</label><br>
+        <input type="text" id="projectName" name="projectName"><br><br>
+        <label for="technologies">Technologies Used:</label><br>
+        <input type="text" id="technologies" name="technologies"required><br>
+        <label for="description">Description:</label><br>
+        <textarea rows="25" id="description" name="description"required></textarea><br>
+        <label for="file">Choose File:</label><br>
+        <input type="file" id="file" name="file" accept=".zip, .rar, .tar.gz"><br><br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

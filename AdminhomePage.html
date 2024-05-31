@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="AdminStudentHOmePage.css">
+  <style>
+        
+    /* CSS for the logo */
+#logo {
+width: 50px; /* Adjust the width as needed */
+border-radius: 10px;
+height: auto; /* Maintain aspect ratio */
+display: block; /* Make the image a block element */
+margin: 0 auto; /* Center the image horizontally */
+margin-top: 10px; /* Adjust top margin as needed */
+/* Add any other styles as needed */
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="./aph.jpg" alt="Logo">
+  <span>Academic Project Hub</span>
+</nav>
+
+<section>
+  <aside>
+    <div class="modules">
+      <a href="./Viewproject.html">View Project</a>
+      <!-- <a href="./AddProject.html">Adding Project</a> -->
+      <!-- <a href="#updating-project">Updating Project</a> -->
+      <a href="./DeleteProject.html">Deleting Project</a>
+      <a href="./studentCatalog.html">Student Catalog</a>
+      <a href="./reg.html">Adding Student</a>
+      <a href="./updateStudent.html">Update Student</a>
+      <a href="./deletingstudent.html">Deleting Student</a>
+      <a href="./accountmanagementadmin.html">Account Management</a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+    <h3>Add projects</h3>
+    <div class="card">
+      <h2>Frontend Projects</h2>
+      <p>Add projects related to frontend development.</p>
+      <div class="button-container">
+        <button onclick="redirectToAddProject1()">Add</button>
+      </div>
+    </div>
+    <!-- D:\AcademicProject\pms\change_password.css -->
+    <div class="card">
+      <h2>Backend Projects</h2>
+      <p>Add projects related to backend development.</p>
+      <div class="button-container">
+        <button onclick="redirectToAddProject2()">Add</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>ML Projects</h2>
+      <p>Add machine learning projects.</p>
+      <div class="button-container">
+        <button onclick="redirectToAddProject3()">Add</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  function redirectToAddProject1() {
+    // Redirect to the addproject.html page
+    window.location.href = "file_upload1.html";
+  }
+  function redirectToAddProject2() {
+    // Redirect to the addproject.html page
+    window.location.href = "file_upload2.html";
+  } function redirectToAddProject3() {
+    // Redirect to the addproject.html page
+    window.location.href = "file_upload3.html";
+  }
+</script>
+
+</body>
+</html>

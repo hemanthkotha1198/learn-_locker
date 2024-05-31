@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Project</title>
+  <link rel="stylesheet" href="AdminStudentHOmePage.css">
+  <style>
+        
+    /* CSS for the logo */
+#logo {
+width: 50px; /* Adjust the width as needed */
+border-radius: 10px;
+border-radius: 50%;
+height: auto; /* Maintain aspect ratio */
+display: block; /* Make the image a block element */
+margin: 0 auto; /* Center the image horizontally */
+margin-top: 10px; /* Adjust top margin as needed */
+/* Add any other styles as needed */
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <img src="./aph.jpg" alt="Logo">
+  <span>Academic Project Hub</span>  
+</nav>
+
+<section>
+  <div class="main-content">
+    <h3>Delete Project</h3>
+    <div class="card" onclick="redirectToDeleteProject1()">
+      <h2>Frontend Projects</h2>
+      <p>Delete projects related to frontend development.</p>
+    </div>
+
+    <div class="card" onclick="redirectToDeleteProject2()">
+      <h2>Backend Projects</h2>
+      <p>Delete projects related to backend development.</p>
+    </div>
+
+    <div class="card" onclick="redirectToDeleteProject3()">
+      <h2>ML Projects</h2>
+      <p>Delete machine learning projects.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function redirectToDeleteProject1(technology) {
+    // Redirect to the delete project page based on the selected technology
+    window.location.href = "./DeleteProjecttec.html";
+  }
+  
+  function redirectToDeleteProject2(technology) {
+    // Redirect to the delete project page based on the selected technology
+    window.location.href = "./DeleteProjecttec2.html";
+  }
+  
+  function redirectToDeleteProject3(technology) {
+    // Redirect to the delete project page based on the selected technology
+    window.location.href = "./DeleteProjecttec3.html";
+  }
+</script>
+
+</body>
+</html>
